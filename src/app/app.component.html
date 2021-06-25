@@ -1,7 +1,19 @@
 <mat-toolbar color="primary" class="header">
   <span></span>
   <span>My Application</span>
-  <button mat-icon-button>
+  <button mat-icon-button (click)="loadData()">
     <mat-icon>add</mat-icon>
   </button>
 </mat-toolbar>
+
+<div class="lists">
+  <mat-card class="list">
+    <mat-card-header> Семья </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-selection-list #shoes color="primary" >
+      <mat-list-option *ngFor="let shoe of typesOfShoes" >
+        {{ shoe }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card>
+</div>

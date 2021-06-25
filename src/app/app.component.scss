@@ -1,4 +1,17 @@
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.list {
+  width: 300px;
+  margin: 10px;
 }
