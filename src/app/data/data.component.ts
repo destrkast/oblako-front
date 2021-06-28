@@ -16,12 +16,15 @@ export class DataComponent implements OnInit {
   url = 'https://oblako-by-destrkast.herokuapp.com/projects';
 
   load() {
-    ajax.getJSON(this.url).pipe(map((data) => data)).subscribe(
-      data => {
-        console.log(data);
+    fetch(this.url)
+    .then((response) => {
+      return response.json();
+    }).then(data => console.log(data)
+    ).catch(err => console.log(err)
+    );    
       }
-    );
-  }
+  
+  
 
   ngOnInit(): void {}
 }
